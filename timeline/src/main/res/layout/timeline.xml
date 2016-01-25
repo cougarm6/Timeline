@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tusharchoudhary.timeline.Timeline
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/timeline_container"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_timeline"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:overScrollMode="never"
+        android:layout_centerHorizontal="true"
+        android:layout_height="250dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_timeline_current_date"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/rv_timeline"
+        android:textColor="#444"
+        android:layout_alignLeft="@id/rv_timeline"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="left"
+        />
+
+    <com.tusharchoudhary.timeline.TimelineView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@id/rv_timeline"
+        android:layout_alignRight="@id/rv_timeline"
+        android:layout_below="@+id/tv_timeline_current_date"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/timeline"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_timeline_start_date"
+        android:layout_below="@+id/timeline"
+        android:layout_marginLeft="10dp"
+        android:layout_alignLeft="@id/rv_timeline"
+        android:textSize="10sp"
+        android:textColor="#444"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeline"
+        android:id="@+id/tv_timeline_end_date"
+        android:layout_alignRight="@id/rv_timeline"
+        android:textSize="10sp"
+        android:layout_marginRight="10dp"
+        android:textColor="#444"
+        />
+</RelativeLayout>
+
+</com.tusharchoudhary.timeline.Timeline>
