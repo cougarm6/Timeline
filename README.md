@@ -11,13 +11,11 @@ gradle-
 
 compile 'com.tusharchoudhary:timeline:1.0.0'
 
-or maven -
+maven-
 
-<dependency>
-  <groupId>com.tusharchoudhary</groupId>
-  <artifactId>timeline</artifactId>
-  <version>1.0.0</version>
-</dependency>
+groupId com.tusharchoudhary
+artifactId timeline
+version 1.0.0
 
 ## Usage
 
