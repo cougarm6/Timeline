@@ -10,7 +10,7 @@ This custom view enables you to simply create a beautiful looking timeline by ju
 gradle-
 
 ```
-compile 'com.tusharchoudhary:timeline:1.0.0'
+compile 'com.tusharchoudhary:timeline:1.1.0'
 ```
 
 maven-
