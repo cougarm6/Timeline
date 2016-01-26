@@ -11,6 +11,14 @@ gradle-
 
 compile 'com.tusharchoudhary:timeline:1.0.0'
 
+or maven -
+
+<dependency>
+  <groupId>com.tusharchoudhary</groupId>
+  <artifactId>timeline</artifactId>
+  <version>1.0.0</version>
+</dependency>
+
 ## Usage
 
 Simply include Timeline in your XML file as :
