@@ -9,18 +9,24 @@ This custom view enables you to simply create a beautiful looking timeline by ju
 
 gradle-
 
+```
 compile 'com.tusharchoudhary:timeline:1.0.0'
+```
 
 maven-
 
-groupId com.tusharchoudhary
-artifactId timeline
-version 1.0.0
+```
+<dependency>
+  <groupId>com.tusharchoudhary</groupId>
+  <artifactId>timeline</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
 
 ## Usage
 
 Simply include Timeline in your XML file as :
-
+```
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -35,13 +41,15 @@ Simply include Timeline in your XML file as :
         />
 
 </LinearLayout>
+```
 
 And simply bind view with data by calling bindView method from your activity / fragment :
-
+```
        Timeline timelineView = (Timeline) findViewById(R.id.timeline_main_view);
         List<TimelineView.TimelineDataItem> list = new ArrayList<>();
         addDummy(list);
         timelineView.bindView(list,timelineView);
+```
 
 The TimelineDataItem takes in Long epochTime and String urlToDownload. 
 
