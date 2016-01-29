@@ -178,18 +178,18 @@ public class Timeline extends LinearLayout implements TimelineView.OnTimeLineCha
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy)
         {
-            if(dx!=0){
+            if(dx!=0) {
                 visibleItemCount = mLayoutManager.getChildCount();
                 totalItemCount = mLayoutManager.getItemCount();
-                    firstVisibleItem = mLayoutManager.findFirstVisibleItemPosition();
-                    Log.e("scrolled"," positions: visibleItemCount "+visibleItemCount+", totalItemCount"+totalItemCount+ ", firstVisibleItemCount "+firstVisibleItem);
-                if(currentItemVisible !=firstVisibleItem){
-                    currentItemVisible = firstVisibleItem;
-                    timelineView.setNewPosition(firstVisibleItem);
-                    if(list!=null)
-                    currentDateTv.setText(DateTimeFormat.forPattern("d MMMM, YYYY").print(new DateTime(list.get(firstVisibleItem).epochTime)));
+                firstVisibleItem = mLayoutManager.findFirstVisibleItemPosition();
+                if (firstVisibleItem != -1 && currentItemVisible != firstVisibleItem) {
+                    Log.e("scrolled", " positions: visibleItemCount " + visibleItemCount + ", totalItemCount" + totalItemCount + ", firstVisibleItemCount " + firstVisibleItem);
+                        currentItemVisible = firstVisibleItem;
+                        timelineView.setNewPosition(firstVisibleItem);
+                        if (list != null)
+                            currentDateTv.setText(DateTimeFormat.forPattern("d MMMM, YYYY").print(new DateTime(list.get(firstVisibleItem).epochTime)));
                 }
-                }
+            }
         }
     }
 }
