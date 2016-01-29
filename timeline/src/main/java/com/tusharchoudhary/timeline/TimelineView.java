@@ -166,9 +166,11 @@ public class TimelineView extends View{
     }
 
     public void setNewPosition(int position){
-        DateTime date = new DateTime(originalList.get(position).epochTime);
-        currentItemPos = getPositionInList(date);
-        invalidate();
+        if(position > -1 && position < originalList.size() - 1) {
+            DateTime date = new DateTime(originalList.get(position).epochTime);
+            currentItemPos = getPositionInList(date);
+            invalidate();
+        }
     }
 
     private int getPositionInList(DateTime date) {

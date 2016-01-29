@@ -28,6 +28,7 @@ import com.squareup.picasso.Picasso;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
+import java.util.Collections;
 import java.util.List;
 
 
@@ -67,6 +68,7 @@ public class Timeline extends LinearLayout implements TimelineView.OnTimeLineCha
 
     public void bindView(List<TimelineView.TimelineDataItem> list,Timeline container) {
         if(list != null && list.size()>0) {
+            Collections.sort(list);
             this.list = list;
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             View timeline = inflater.inflate(R.layout.timeline, null);
