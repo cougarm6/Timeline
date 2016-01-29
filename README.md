@@ -11,7 +11,7 @@ This custom view enables you to simply create a beautiful looking timeline by ju
 gradle-
 
 ```
-compile 'com.tusharchoudhary:timeline:1.2.0'
+compile 'com.tusharchoudhary:timeline:1.2.1'
 ```
 
 maven-
@@ -20,7 +20,7 @@ maven-
 <dependency>
   <groupId>com.tusharchoudhary</groupId>
   <artifactId>timeline</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.1</version>
 </dependency>
 ```
 
