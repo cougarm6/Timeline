@@ -19,7 +19,6 @@ public class TimelineSampleActivity extends AppCompatActivity {
         Timeline timelineView = (Timeline) findViewById(R.id.timeline_main_view);
         List<TimelineView.TimelineDataItem> list = new ArrayList<>();
         addDummy(list);
-        Collections.sort(list);
         timelineView.bindView(list,timelineView);
     }
 
